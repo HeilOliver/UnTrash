@@ -1,0 +1,304 @@
+﻿@page "/R/{Id:guid}"
+@using QRCoder
+@using System.Drawing
+@using System.Drawing.Imaging
+@using UnTrash.Data
+@using Color = MudBlazor.Color
+
+
+
+<MudContainer
+    Class="my-10;"
+    Fixed="true">
+
+    <MudGrid
+        Class="mt-16">
+
+        <MudItem
+            xs="12"
+            sm="12"
+            md="6">
+
+            <MudText
+                Class="ml-8"
+                Typo="Typo.h1">
+                unTrash
+            </MudText>
+            <MudText
+                Class="ml-8"
+                Color="Color.Primary"
+                Typo="Typo.h1">
+                passport
+            </MudText>
+        </MudItem>
+
+        <MudItem
+            xs="12"
+            sm="12"
+            md="6">
+
+            <MudCard
+                Class="pa-4">
+
+                <MudGrid
+                    Justify="Justify.Center"
+                    Spacing="5">
+                    <MudItem>
+                        <MudText
+                            Class="ml-4 mt-12 mr-4"
+                            Typo="Typo.h1">
+                            @if ((individualProduct?.Transactions?.Count ?? 0) > 1)
+                            {
+                                @($"{product?.CarbonFootprint}")
+                            }
+                            else
+                            {
+                                @($"0")
+                            }
+                        </MudText>
+                        <MudText
+                            Color="Color.Primary"
+                            Class="ml-4 mt-0 mr-4"
+                            Typo="Typo.h4">
+                            CO2 Saved
+                        </MudText>
+                    </MudItem>
+                    <MudItem>
+                        <MudProgressCircular
+                            Style="width: 200px; height: 200px;"
+                            Color="Color.Primary"
+                            Min="0"
+                            Max="10"
+                            StrokeWidth="3"
+                            Value="@(product?.Score ?? 0)">
+                        </MudProgressCircular>
+                        <div style="margin-top: -172px; margin-left: 72px; font-size: 98px;">
+                            @($"{product?.Score:F0}")
+                        </div>
+                        <MudText
+                            Class="ml-4 mt-12 mr-4"
+                            Typo="Typo.body1">
+                            unTrash score
+                        </MudText>
+                    </MudItem>
+                    <MudItem>
+                        @((MarkupString) picture)
+                        <MudText
+                            Class="ml-4 mt-4 mr-4"
+                            Typo="Typo.body1">
+                            Passport code
+                        </MudText>
+                    </MudItem>
+                </MudGrid>
+            </MudCard>
+        </MudItem>
+
+        <MudItem
+            xs="12"
+            sm="6"
+            md="4">
+            <MudCard>
+                <MudCardMedia
+                    Image="@product?.ImageUrl"
+                    Height="200"/>
+                
+                <MudText
+                    Class="mb-2 mt-2 ml-4"
+                    Typo="Typo.h4">
+                    @product?.Name
+                </MudText>
+
+                <MudCardContent>
+                    <div class="ma-2">
+                        @foreach (var entry in product?.Features ?? new List<Entry>())
+                        {
+                            <MudTextField
+                                DisableUnderLine="true"
+                                Value="@entry.Value"
+                                Label="@entry.Key"
+                                Variant="Variant.Text"></MudTextField>
+                        }
+                    </div>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+
+        <MudItem
+            xs="12"
+            sm="6"
+            md="4">
+            <MudCard>
+                <MudCardContent>
+                    <MudText
+                        Class="mb-2 mt-4 ml-4"
+                        Typo="Typo.h4">
+                        Components
+                    </MudText>
+
+                    <div class="ma-4">
+                        @foreach (var entry in product?.Components ?? new List<Entry>())
+                        {
+                            <MudTextField
+                                DisableUnderLine="true"
+                                Value="@($"{double.Parse(entry.Value):F2} CHF")"
+                                Label="@entry.Key"
+                                Variant="Variant.Text"></MudTextField>
+                        }
+                    </div>
+
+                    <MudDivider/>
+
+                    <MudText
+                        Class="mb-2 mt-4 ml-4"
+                        Typo="Typo.h4">
+                        Raw Material
+                    </MudText>
+
+                    <div class="ma-4">
+                        @foreach (var entry in product?.Material ?? new List<Entry>())
+                        {
+                            <MudTextField
+                                DisableUnderLine="true"
+                                Value="@($"{double.Parse(entry.Value):F2} CHF")"
+                                Label="@entry.Key"
+                                Variant="Variant.Text"></MudTextField>
+                        }
+                    </div>
+                </MudCardContent>
+            </MudCard>
+        </MudItem>
+
+        <MudItem
+            xs="12"
+            sm="6"
+            md="4">
+            <MudCard
+                Class="pa-4">
+                
+                <MudText
+                    Class="mb-2 mt-4 ml-4"
+                    Typo="Typo.h4">
+                    unTrash Score
+                </MudText>
+
+                <div class="ma-4">
+                    
+                    <MudTextField
+                        DisableUnderLine="true"
+                        Value="@product?.MaterialOrigin"
+                        Label="MaterialOrigin"
+                        Variant="Variant.Text"></MudTextField>
+
+                    <MudTextField
+                        DisableUnderLine="true"
+                        Value="@product?.Repairability"
+                        Label="Repairability"
+                        Variant="Variant.Text"></MudTextField>
+
+                    <MudTextField
+                        DisableUnderLine="true"
+                        Value="@product?.Recoverability"
+                        Label="Recoverability"
+                        Variant="Variant.Text"></MudTextField>
+                        
+                    <MudTextField
+                        DisableUnderLine="true"
+                        Value="@product?.Lifespan"
+                        Label="Lifespan"
+                        Variant="Variant.Text"></MudTextField>
+                </div>
+
+                <MudDivider/>
+                
+                <MudText
+                    Class="mb-2 mt-4 ml-4"
+                    Typo="Typo.h4">
+                    History
+                </MudText>
+
+                <MudTimeline
+                    Value="TimelineAlign.Default"
+                    TimelinePosition="TimelinePosition.Start">
+
+                    @foreach (var transaction in individualProduct?.Transactions ?? new List<ProductTranslation>())
+                    {
+                        <MudTimelineItem Color="Color.Dark" Elevation="25">
+                            <ItemContent>
+                                <MudPaper Elevation="0" Class="mt-n1">
+                                    <MudText Color="Color.Dark" Typo="Typo.h6" GutterBottom="true">@transaction.Action</MudText>
+                                    <MudText Color="Color.Dark" Typo="Typo.body2">@transaction.DateTime</MudText>
+                                </MudPaper>
+                            </ItemContent>
+                        </MudTimelineItem>
+                    }
+                </MudTimeline>
+            </MudCard>
+        </MudItem>
+    </MudGrid>
+</MudContainer>
+
+
+@code {
+    private string picture;
+    private Product product;
+    private IndividualProduct individualProduct;
+
+    [Parameter]
+    public Guid Id { get; set; }
+
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    [Inject]
+    public IndividualProductDataProvider IndividualProductDataProvider { get; set; }
+
+    [Inject]
+    public ProductDataProvider ProductDataProvider { get; set; }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        individualProduct = await IndividualProductDataProvider.Get(Id);
+        var linkProduct = individualProduct.Product;
+        product = await ProductDataProvider.GetSingle(linkProduct);
+    }
+
+    protected override void OnAfterRender(bool firstRender)
+    {
+        base.OnAfterRender(firstRender);
+        if (!firstRender)
+            return;
+
+        string uri = NavigationManager.Uri;
+        uri = uri.Replace("?showBig=True", "");
+
+        QRCodeGenerator qrGenerator = new QRCodeGenerator();
+        QRCodeData qrCodeData = qrGenerator.CreateQrCode(uri, QRCodeGenerator.ECCLevel.Q);
+        QRCode qrCode = new QRCode(qrCodeData);
+        Bitmap qrCodeImage = qrCode.GetGraphic(20);
+        picture = ToBase64ImageTag(qrCodeImage, ImageFormat.Jpeg);
+        StateHasChanged();
+    }
+
+    public string ToBase64String(Bitmap bmp, ImageFormat imageFormat)
+    {
+        MemoryStream memoryStream = new MemoryStream();
+        bmp.Save(memoryStream, imageFormat);
+
+
+        memoryStream.Position = 0;
+        byte[] byteBuffer = memoryStream.ToArray();
+
+
+        memoryStream.Close();
+        string base64String = Convert.ToBase64String(byteBuffer);
+        return base64String;
+    }
+
+    public string ToBase64ImageTag(Bitmap bmp, ImageFormat imageFormat)
+    {
+        string base64String = ToBase64String(bmp, imageFormat);
+        string imgTag = $"<img src=\"data:image/{imageFormat};base64, {base64String}\" width=\"200px;\" height=\"200px;\"  />";
+        return imgTag;
+    }
+
+}

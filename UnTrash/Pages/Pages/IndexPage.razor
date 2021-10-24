@@ -1,0 +1,215 @@
+﻿@page "/"
+@using UnTrash.Data
+@using Microsoft.AspNetCore.WebUtilities
+
+
+@if (string.IsNullOrEmpty(searchTerm))
+{
+    <img src="assets/logoBig.png" style="z-index: -1;width: 60vw;position: absolute;right: 60px;top: 35px;overflow: hidden;"/>
+
+    <MudCarousel 
+        Style="height:400px;" 
+        ShowArrows="false" 
+        ShowDelimiters="false" 
+        AutoCycle="true" 
+        TData="object">
+        <MudCarouselItem Transition="Transition.Slide" Color="@Color.Transparent">
+            <div class="ml-16 mt-16">
+                <MudText
+                    Typo="Typo.h1">
+                    Give your
+                </MudText>
+                <MudText
+                    Typo="Typo.h1">
+                    device an
+                </MudText>
+                <MudText
+                    Color="Color.Primary"
+                    Typo="Typo.h1">
+                    identity
+                </MudText>
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="Transition.Slide" Color="@Color.Transparent">
+            <div class="ml-16 mt-16">
+                <MudText
+                    Typo="Typo.h1">
+                    Be part
+                </MudText>
+                <MudText
+                    Typo="Typo.h1">
+                    of a circular
+                </MudText>
+                <MudText
+                    Color="Color.Primary"
+                    Typo="Typo.h1">
+                    economy
+                </MudText>
+            </div>
+        </MudCarouselItem>
+        <MudCarouselItem Transition="Transition.Slide" Color="@Color.Transparent">
+            <div class="ml-16 mt-16">
+                <MudText
+                    Typo="Typo.h1">
+                    Reduce
+                </MudText>
+                <MudText
+                    Color="Color.Primary"
+                    Typo="Typo.h1">
+                    Reuse
+                </MudText>
+                <MudText
+                    Typo="Typo.h1">
+                    Recycle
+                </MudText>
+            </div>
+        </MudCarouselItem>
+    </MudCarousel>
+
+
+}
+
+<div class="mt-16 ml-16 mr-16 mb-3">
+    <MudCard
+        Class="pa-4">
+
+        <MudText
+            Class="ml-1 mt-1 mr-1"
+            Typo="Typo.body1">
+            Search for a Product
+        </MudText>
+
+        <MudTextField
+            Class="ml-1 mb-1 mr-1"
+            T="string"
+            DebounceInterval="500"
+            Immediate="true"
+            Value="@searchTerm"
+            ValueChanged="@OnSearchTermChanged"
+            Variant="Variant.Outlined"/>
+    </MudCard>
+</div>
+
+@if (!string.IsNullOrEmpty(searchTerm))
+{
+    <MudContainer
+        Fixed="true">
+
+        <MudGrid>
+
+            @if (inLoad)
+            {
+                <MudProgressCircular
+                    Class="mt-10"
+                    Style="margin-left: auto; margin-right: auto; width: 150px; height: 150px;"
+                    Color="Color.Primary"
+                    Size="Size.Large"
+                    Indeterminate="true"/>
+            }
+            else
+            {
+                @foreach (var product in products)
+                {
+                    <MudItem xs="12" sm="6" md="4" xl="3">
+
+                        <MudCard
+                            Elevation="25">
+                            <MudCardMedia
+                                Image="@product.ImageUrl"
+                                Height="200"/>
+
+                            <MudCardContent>
+                                <MudText Typo="Typo.h5">@product.Name</MudText>
+                                <MudText Typo="Typo.body2">@product.PrimaryFeature0</MudText>
+                                <MudText Typo="Typo.body2">@product.PrimaryFeature1</MudText>
+                            </MudCardContent>
+
+                            <MudCardActions>
+                                <MudIconButton
+                                    Icon="@Icons.Filled.QrCode"
+                                    OnClick="() => ToGenerate(product)"
+                                    Color="Color.Primary"/>
+                                
+                                <MudText Typo="Typo.body2" Color="Color.Primary">Register device</MudText>
+                                <MudSpacer/>
+                                <MudButtonGroup
+                                    OverrideStyles="true">
+                                    <MudButton
+                                        Color="Color.Primary"
+                                        OnClick="() => ToSell(product)"
+                                        Variant="Variant.Outlined">
+                                        Sell
+                                    </MudButton>
+                                    <MudButton
+                                        Color="Color.Error"
+                                        OnClick="() => ToBuy(product)"
+                                        Variant="Variant.Outlined">
+                                        Buy
+                                    </MudButton>
+                                </MudButtonGroup>
+                            </MudCardActions>
+                        </MudCard>
+                    </MudItem>
+                }
+            }
+
+        </MudGrid>
+    </MudContainer>
+}
+
+
+@code
+{
+    private List<Product> products = new();
+    private string searchTerm;
+    private bool inLoad;
+
+    [Inject]
+    public ProductDataProvider Provider { get; set; }
+
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    public async Task OnSearchTermChanged(string term)
+    {
+        searchTerm = term;
+        inLoad = true;
+
+        try
+        {
+            products = await Provider.GetProductFrom(term);
+        }
+        finally
+        {
+            inLoad = false;
+            StateHasChanged();
+        }
+    }
+
+    private void ToGenerate(Product product)
+    {
+        string addQueryString = QueryHelpers.AddQueryString($"/Generate/{product.Id}", new Dictionary<string, string>()
+        {
+            {"initName", product.Name}
+        });
+        NavigationManager.NavigateTo(addQueryString);
+    }
+
+    private void ToSell(Product product)
+    {
+        string addQueryString = QueryHelpers.AddQueryString($"/Sell/{product.Id}", new Dictionary<string, string>()
+        {
+            {"initName", product.Name}
+        });
+        NavigationManager.NavigateTo(addQueryString);
+    }
+
+    private void ToBuy(Product product)
+    {
+        string addQueryString = QueryHelpers.AddQueryString($"/Buy/{product.Id}", new Dictionary<string, string>()
+        {
+            {"initName", product.Name}
+        });
+        NavigationManager.NavigateTo(addQueryString);
+    }
+}

@@ -1,0 +1,41 @@
+﻿@inherits LayoutComponentBase
+
+<MudLayout>
+    <MudAppBar 
+        Style="height: 80px;"
+        Color="Color.Primary"
+        Elevation="5">
+        <MudText
+            Color="Color.Secondary"
+            Style="letter-spacing: .5rem; font-weight: 300; margin-left: 12px; font-size: 24px; user-select: none"
+            Typo="Typo.h5">
+            <span style="font-weight: 600;">unTrash </span>
+            <div class="	.d-none .d-md-flex .d-lg-none">circular market</div>
+        </MudText>
+
+        <MudSpacer/>
+
+        <MudButton Link="/"
+                   Variant="Variant.Text"
+                   Color="Color.Secondary"
+                   Style="text-transform:none">
+            Home
+        </MudButton>
+        <MudButton Link="https://sdgs.un.org/goals/goal12"
+                   Variant="Variant.Text"
+                   Color="Color.Secondary"
+                   Style="text-transform:none">
+            Goals
+        </MudButton>
+        <MudButton Link="/Devices"
+                   Variant="Variant.Text"
+                   Color="Color.Secondary"
+                   Style="text-transform:none">
+            Devices
+        </MudButton>
+    </MudAppBar>
+
+    <MudMainContent>
+        @Body
+    </MudMainContent>
+</MudLayout>

@@ -1,0 +1,786 @@
+[
+  {
+    "Id": "18a35770-3965-4959-a840-1b386e4f5379",
+    "Name": "iPhone 11 Pro 64GB",
+    "PrimaryFeature0": "64GB",
+    "PrimaryFeature1": "Chip A13 Bionic",
+    "Features": [
+      {
+        "Key": "Producer",
+        "Value": "Apple"
+      },
+      {
+        "Key": "Model",
+        "Value": "iPhone 11 Pro"
+      },
+      {
+        "Key": "Capacity",
+        "Value": "64GB"
+      },
+      {
+        "Key": "Chip",
+        "Value": "A13 Bionic"
+      },
+      {
+        "Key": "Camera",
+        "Value": "Dual 12MP Ultra Wide"
+      }
+    ],
+    "Material": [
+      {
+        "Key": "Gold",
+        "Value": "1.963800643086817"
+      },
+      {
+        "Key": "Palladium",
+        "Value": "0.975"
+      },
+      {
+        "Key": "Cobalt",
+        "Value": "0.3729389067524115"
+      },
+      {
+        "Key": "Silver",
+        "Value": "0.2658778135048232"
+      },
+      {
+        "Key": "Copper",
+        "Value": "0.0781479099678456"
+      },
+      {
+        "Key": "Nickel",
+        "Value": "0.054225080385852"
+      },
+      {
+        "Key": "Platinum",
+        "Value": "0.033568810289389"
+      },
+      {
+        "Key": "Lithium",
+        "Value": "0.0248971061093247"
+      }
+    ],
+    "Components": [
+      {
+        "Key": "Screen",
+        "Value": "62.495"
+      },
+      {
+        "Key": "Rear Camera",
+        "Value": "34.995"
+      },
+      {
+        "Key": "Front Camera Assembly",
+        "Value": "12.495"
+      }
+    ],
+    "LastTradeFor": "450 CHF",
+    "ProductsOnMarkedPlace": "1",
+    "CarbonFootprint": "72kg",
+    "Lifespan": "8",
+    "Repairability": "6",
+    "Recoverability": "9.375",
+    "MaterialOrigin": "2.5",
+    "ImageUrl": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202108/iPhone_13_Pro_render_LeaksAppl.jpg?Ce5o17hnNudPLr2OIXHro5bwTe0Txbsf&size=770:433"
+  },
+  {
+    "Id": "18a35771-3965-4959-a840-1b386e4f5379",
+    "Name": "iPhone 11 Pro 128GB",
+    "PrimaryFeature0": "128 GB",
+    "PrimaryFeature1": "8-core Neural Engine Chip",
+    "Features": [
+      {
+        "Key": "Producer",
+        "Value": "Apple"
+      },
+      {
+        "Key": "Model",
+        "Value": "iPhone 11 Pro"
+      },
+      {
+        "Key": "Capacity",
+        "Value": "128GB"
+      },
+      {
+        "Key": "Chip",
+        "Value": "8-core Neural Engine"
+      },
+      {
+        "Key": "Camera",
+        "Value": "Dual 12MP Ultra Wide"
+      }
+    ],
+    "Material": [
+      {
+        "Key": "Gold",
+        "Value": "1.963800643086817"
+      },
+      {
+        "Key": "Palladium",
+        "Value": "0.975"
+      },
+      {
+        "Key": "Cobalt",
+        "Value": "0.3729389067524115"
+      },
+      {
+        "Key": "Silver",
+        "Value": "0.2658778135048232"
+      },
+      {
+        "Key": "Copper",
+        "Value": "0.0781479099678456"
+      },
+      {
+        "Key": "Nickel",
+        "Value": "0.054225080385852"
+      },
+      {
+        "Key": "Platinum",
+        "Value": "0.033568810289389"
+      },
+      {
+        "Key": "Lithium",
+        "Value": "0.0248971061093247"
+      }
+    ],
+    "Components": [
+      {
+        "Key": "Screen",
+        "Value": "62.495"
+      },
+      {
+        "Key": "Rear Camera",
+        "Value": "34.995"
+      },
+      {
+        "Key": "Front Camera Assembly",
+        "Value": "12.495"
+      }
+    ],
+    "LastTradeFor": "499 CHF",
+    "ProductsOnMarkedPlace": "1",
+    "CarbonFootprint": "77kg",
+    "Lifespan": "8",
+    "Repairability": "6",
+    "Recoverability": "9.375",
+    "MaterialOrigin": "2.5",
+    "ImageUrl": "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202108/iPhone_13_Pro_render_LeaksAppl.jpg?Ce5o17hnNudPLr2OIXHro5bwTe0Txbsf&size=770:433"
+  },
+  {
+    "Id": "19a35770-3965-4959-a840-1b386e4f5379",
+    "Name": "MacBook Pro 2020 13inch 256GB",
+    "PrimaryFeature0": "256 GB",
+    "PrimaryFeature1": "Apple M1 Chip",
+    "Features": [
+      {
+        "Key": "Producer",
+        "Value": "Apple"
+      },
+      {
+        "Key": "Model",
+        "Value": "MacBook Pro 2020 13inch"
+      },
+      {
+        "Key": "Capacity",
+        "Value": "256GB"
+      },
+      {
+        "Key": "Chip",
+        "Value": "Apple M1 Chip"
+      },
+      {
+        "Key": "Memory",
+        "Value": "8GB"
+      }
+    ],
+    "Material": [
+      {
+        "Key": "Gold",
+        "Value": "9.287621864951769"
+      },
+      {
+        "Key": "Tantalum",
+        "Value": "4.862433440514469"
+      },
+      {
+        "Key": "Palladium",
+        "Value": "2.613"
+      },
+      {
+        "Key": "Galium",
+        "Value": "0.4964506109324759"
+      },
+      {
+        "Key": "Silver",
+        "Value": "0.2682550739549839"
+      },
+      {
+        "Key": "Cobalt",
+        "Value": "0.0036399742765273"
+      }
+    ],
+    "Components": [
+      {
+        "Key": "Logic Board with Paired Touch ID Sensor",
+        "Value": "399.995"
+      },
+      {
+        "Key": "Upper Case Assembly with Keyboard",
+        "Value": "149.995"
+      },
+      {
+        "Key": "Touch Bar and USB-C Cable Bracket",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Lower Case",
+        "Value": "49.995"
+      },
+      {
+        "Key": "Fan",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Trackpad",
+        "Value": "29.995"
+      }
+    ],
+    "LastTradeFor": "1000 CHF",
+    "ProductsOnMarkedPlace": "1",
+    "CarbonFootprint": "278kg",
+    "Lifespan": "5",
+    "Repairability": "5",
+    "Recoverability": "7.833333333333333",
+    "MaterialOrigin": "0",
+    "ImageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-pro-13-og-202011?wid=600&hei=315&fmt=jpeg&qlt=95&.v=1604347427000"
+  },
+  {
+    "Id": "18a35770-3965-4959-a840-1b386e4f5370",
+    "Name": "MacBook Pro 2020 13inch 512GB",
+    "PrimaryFeature0": "512 GB",
+    "PrimaryFeature1": "Apple M1 Chip",
+    "Features": [
+      {
+        "Key": "Producer",
+        "Value": "Apple"
+      },
+      {
+        "Key": "Model",
+        "Value": "MacBook Pro 2020 13inch"
+      },
+      {
+        "Key": "Capacity",
+        "Value": "512GB"
+      },
+      {
+        "Key": "Chip",
+        "Value": "Apple M1 Chip"
+      },
+      {
+        "Key": "Memory",
+        "Value": "16GB"
+      }
+    ],
+    "Material": [
+      {
+        "Key": "Gold",
+        "Value": "9.287621864951769"
+      },
+      {
+        "Key": "Tantalum",
+        "Value": "4.862433440514469"
+      },
+      {
+        "Key": "Palladium",
+        "Value": "2.613"
+      },
+      {
+        "Key": "Galium",
+        "Value": "0.4964506109324759"
+      },
+      {
+        "Key": "Silver",
+        "Value": "0.2682550739549839"
+      },
+      {
+        "Key": "Cobalt",
+        "Value": "0.0036399742765273"
+      }
+    ],
+    "Components": [
+      {
+        "Key": "Logic Board with Paired Touch ID Sensor",
+        "Value": "399.995"
+      },
+      {
+        "Key": "Upper Case Assembly with Keyboard",
+        "Value": "149.995"
+      },
+      {
+        "Key": "Touch Bar and USB-C Cable Bracket",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Lower Case",
+        "Value": "49.995"
+      },
+      {
+        "Key": "Fan",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Trackpad",
+        "Value": "29.995"
+      }
+    ],
+    "LastTradeFor": "1350 CHF",
+    "ProductsOnMarkedPlace": "1",
+    "CarbonFootprint": "300kg",
+    "Lifespan": "5",
+    "Repairability": "5",
+    "Recoverability": "7.833333333333333",
+    "MaterialOrigin": "0",
+    "ImageUrl": "https://store.storeimages.cdn-apple.com/4668/as-images.apple.com/is/macbook-pro-13-og-202011?wid=600&hei=315&fmt=jpeg&qlt=95&.v=1604347427000"
+  },
+  {
+    "Id": "18a35770-3965-4959-a840-1b386e4f5374",
+    "Name": "Samsung Galaxy Z Flip 3 5G",
+    "PrimaryFeature0": "128GB",
+    "PrimaryFeature1": "Snapdragon 888 processor",
+    "Features": [
+      {
+        "Key": "Producer",
+        "Value": "Apple"
+      },
+      {
+        "Key": "Model",
+        "Value": "MacBook Pro 2020 13inch"
+      },
+      {
+        "Key": "Capacity",
+        "Value": "512GB"
+      },
+      {
+        "Key": "Chip",
+        "Value": "Apple M1 Chip"
+      },
+      {
+        "Key": "Memory",
+        "Value": "16GB"
+      }
+    ],
+    "Material": [
+      {
+        "Key": "Gold",
+        "Value": "9.287621864951769"
+      },
+      {
+        "Key": "Tantalum",
+        "Value": "4.862433440514469"
+      },
+      {
+        "Key": "Palladium",
+        "Value": "2.613"
+      },
+      {
+        "Key": "Galium",
+        "Value": "0.4964506109324759"
+      },
+      {
+        "Key": "Silver",
+        "Value": "0.2682550739549839"
+      },
+      {
+        "Key": "Cobalt",
+        "Value": "0.0036399742765273"
+      }
+    ],
+    "Components": [
+      {
+        "Key": "Logic Board with Paired Touch ID Sensor",
+        "Value": "399.995"
+      },
+      {
+        "Key": "Upper Case Assembly with Keyboard",
+        "Value": "149.995"
+      },
+      {
+        "Key": "Touch Bar and USB-C Cable Bracket",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Lower Case",
+        "Value": "49.995"
+      },
+      {
+        "Key": "Fan",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Trackpad",
+        "Value": "29.995"
+      }
+    ],
+    "LastTradeFor": "1350 CHF",
+    "ProductsOnMarkedPlace": "1",
+    "CarbonFootprint": "300kg",
+    "Lifespan": "5",
+    "Repairability": "5",
+    "Recoverability": "7.833333333333333",
+    "MaterialOrigin": "0",
+    "ImageUrl": "https://www.notebookcheck.net/fileadmin/Notebooks/News/_nc3/flip_teaser.png"
+  },
+  {
+    "Id": "18a35770-3965-4959-a840-1b386e4f5375",
+    "Name": "Samsung Galaxy S21 5G",
+    "PrimaryFeature0": "256GB",
+    "PrimaryFeature1": "Exynos 2100 processor",
+    "Features": [
+      {
+        "Key": "Producer",
+        "Value": "Apple"
+      },
+      {
+        "Key": "Model",
+        "Value": "MacBook Pro 2020 13inch"
+      },
+      {
+        "Key": "Capacity",
+        "Value": "512GB"
+      },
+      {
+        "Key": "Chip",
+        "Value": "Apple M1 Chip"
+      },
+      {
+        "Key": "Memory",
+        "Value": "16GB"
+      }
+    ],
+    "Material": [
+      {
+        "Key": "Gold",
+        "Value": "9.287621864951769"
+      },
+      {
+        "Key": "Tantalum",
+        "Value": "4.862433440514469"
+      },
+      {
+        "Key": "Palladium",
+        "Value": "2.613"
+      },
+      {
+        "Key": "Galium",
+        "Value": "0.4964506109324759"
+      },
+      {
+        "Key": "Silver",
+        "Value": "0.2682550739549839"
+      },
+      {
+        "Key": "Cobalt",
+        "Value": "0.0036399742765273"
+      }
+    ],
+    "Components": [
+      {
+        "Key": "Logic Board with Paired Touch ID Sensor",
+        "Value": "399.995"
+      },
+      {
+        "Key": "Upper Case Assembly with Keyboard",
+        "Value": "149.995"
+      },
+      {
+        "Key": "Touch Bar and USB-C Cable Bracket",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Lower Case",
+        "Value": "49.995"
+      },
+      {
+        "Key": "Fan",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Trackpad",
+        "Value": "29.995"
+      }
+    ],
+    "LastTradeFor": "1350 CHF",
+    "ProductsOnMarkedPlace": "1",
+    "CarbonFootprint": "300kg",
+    "Lifespan": "5",
+    "Repairability": "5",
+    "Recoverability": "7.833333333333333",
+    "MaterialOrigin": "0",
+    "ImageUrl": "https://cdn57.androidauthority.net/wp-content/uploads/2021/02/Samsung-Galaxy-S21-Ultra-Silver-back.jpg"
+  },
+  {
+    "Id": "18a35770-3965-4959-a840-1b386e4f5376",
+    "Name": "Dell XPS 13",
+    "PrimaryFeature0": "512GB",
+    "PrimaryFeature1": "Intel Core i7",
+    "Features": [
+      {
+        "Key": "Producer",
+        "Value": "Apple"
+      },
+      {
+        "Key": "Model",
+        "Value": "MacBook Pro 2020 13inch"
+      },
+      {
+        "Key": "Capacity",
+        "Value": "512GB"
+      },
+      {
+        "Key": "Chip",
+        "Value": "Apple M1 Chip"
+      },
+      {
+        "Key": "Memory",
+        "Value": "16GB"
+      }
+    ],
+    "Material": [
+      {
+        "Key": "Gold",
+        "Value": "9.287621864951769"
+      },
+      {
+        "Key": "Tantalum",
+        "Value": "4.862433440514469"
+      },
+      {
+        "Key": "Palladium",
+        "Value": "2.613"
+      },
+      {
+        "Key": "Galium",
+        "Value": "0.4964506109324759"
+      },
+      {
+        "Key": "Silver",
+        "Value": "0.2682550739549839"
+      },
+      {
+        "Key": "Cobalt",
+        "Value": "0.0036399742765273"
+      }
+    ],
+    "Components": [
+      {
+        "Key": "Logic Board with Paired Touch ID Sensor",
+        "Value": "399.995"
+      },
+      {
+        "Key": "Upper Case Assembly with Keyboard",
+        "Value": "149.995"
+      },
+      {
+        "Key": "Touch Bar and USB-C Cable Bracket",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Lower Case",
+        "Value": "49.995"
+      },
+      {
+        "Key": "Fan",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Trackpad",
+        "Value": "29.995"
+      }
+    ],
+    "LastTradeFor": "1350 CHF",
+    "ProductsOnMarkedPlace": "1",
+    "CarbonFootprint": "300kg",
+    "Lifespan": "5",
+    "Repairability": "5",
+    "Recoverability": "7.833333333333333",
+    "MaterialOrigin": "0",
+    "ImageUrl": "https://i.dell.com/is/image/DellContent//content/dam/global-site-design/product_images/dell_client_products/notebooks/xps_notebooks/xps_13_9305_touch/general/notebooks-xps-13-9305-laptop-pdp-design-gallery504x350.jpg?qlt=95&fit=constrain,1&hei=350&wid=504&fmt=jpg&wid=570&hei=400"
+  },
+  {
+    "Id": "18a35770-3965-4959-a840-1b386e4f5377",
+    "Name": "ThinkPad X1 Yoga Gen 6",
+    "PrimaryFeature0": "512GB",
+    "PrimaryFeature1": "Intel Core i5",
+    "Features": [
+      {
+        "Key": "Producer",
+        "Value": "Apple"
+      },
+      {
+        "Key": "Model",
+        "Value": "MacBook Pro 2020 13inch"
+      },
+      {
+        "Key": "Capacity",
+        "Value": "512GB"
+      },
+      {
+        "Key": "Chip",
+        "Value": "Apple M1 Chip"
+      },
+      {
+        "Key": "Memory",
+        "Value": "16GB"
+      }
+    ],
+    "Material": [
+      {
+        "Key": "Gold",
+        "Value": "9.287621864951769"
+      },
+      {
+        "Key": "Tantalum",
+        "Value": "4.862433440514469"
+      },
+      {
+        "Key": "Palladium",
+        "Value": "2.613"
+      },
+      {
+        "Key": "Galium",
+        "Value": "0.4964506109324759"
+      },
+      {
+        "Key": "Silver",
+        "Value": "0.2682550739549839"
+      },
+      {
+        "Key": "Cobalt",
+        "Value": "0.0036399742765273"
+      }
+    ],
+    "Components": [
+      {
+        "Key": "Logic Board with Paired Touch ID Sensor",
+        "Value": "399.995"
+      },
+      {
+        "Key": "Upper Case Assembly with Keyboard",
+        "Value": "149.995"
+      },
+      {
+        "Key": "Touch Bar and USB-C Cable Bracket",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Lower Case",
+        "Value": "49.995"
+      },
+      {
+        "Key": "Fan",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Trackpad",
+        "Value": "29.995"
+      }
+    ],
+    "LastTradeFor": "1350 CHF",
+    "ProductsOnMarkedPlace": "1",
+    "CarbonFootprint": "300kg",
+    "Lifespan": "5",
+    "Repairability": "5",
+    "Recoverability": "7.833333333333333",
+    "MaterialOrigin": "0",
+    "ImageUrl": "https://www.lenovo.com/medias/lenovo-laptop-thinkpad-x1-yoga-gen5-subseries-gallery-1.jpg?context=bWFzdGVyfHJvb3R8NTA2MzZ8aW1hZ2UvanBlZ3xoODgvaGJhLzEwNjc2OTI2NTQ1OTUwLmpwZ3xjN2M2ZGFhODQxNDI1ZTg2NzkzNGM3YjQ1YzNlNjEwZGUzOTM2YjU0ZDgxMDJkZjBhNWYyNmNkY2M0ZDU4YzA2"
+  },
+  {
+    "Id": "18a35770-3965-4959-a840-1b386e4f5378",
+    "Name": "Amazon Kindle Paperwhite",
+    "PrimaryFeature0": "8GB",
+    "PrimaryFeature1": "1072 x 1448 Pixels",
+    "Features": [
+      {
+        "Key": "Producer",
+        "Value": "Apple"
+      },
+      {
+        "Key": "Model",
+        "Value": "MacBook Pro 2020 13inch"
+      },
+      {
+        "Key": "Capacity",
+        "Value": "512GB"
+      },
+      {
+        "Key": "Chip",
+        "Value": "Apple M1 Chip"
+      },
+      {
+        "Key": "Memory",
+        "Value": "16GB"
+      }
+    ],
+    "Material": [
+      {
+        "Key": "Gold",
+        "Value": "9.287621864951769"
+      },
+      {
+        "Key": "Tantalum",
+        "Value": "4.862433440514469"
+      },
+      {
+        "Key": "Palladium",
+        "Value": "2.613"
+      },
+      {
+        "Key": "Galium",
+        "Value": "0.4964506109324759"
+      },
+      {
+        "Key": "Silver",
+        "Value": "0.2682550739549839"
+      },
+      {
+        "Key": "Cobalt",
+        "Value": "0.0036399742765273"
+      }
+    ],
+    "Components": [
+      {
+        "Key": "Logic Board with Paired Touch ID Sensor",
+        "Value": "399.995"
+      },
+      {
+        "Key": "Upper Case Assembly with Keyboard",
+        "Value": "149.995"
+      },
+      {
+        "Key": "Touch Bar and USB-C Cable Bracket",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Lower Case",
+        "Value": "49.995"
+      },
+      {
+        "Key": "Fan",
+        "Value": "39.995"
+      },
+      {
+        "Key": "Trackpad",
+        "Value": "29.995"
+      }
+    ],
+    "LastTradeFor": "1350 CHF",
+    "ProductsOnMarkedPlace": "1",
+    "CarbonFootprint": "300kg",
+    "Lifespan": "5",
+    "Repairability": "5",
+    "Recoverability": "7.833333333333333",
+    "MaterialOrigin": "0",
+    "ImageUrl": "https://s.yimg.com/uu/api/res/1.2/mmiu7g460.fKZmk5eoKrcQ--~B/aD0xMDM1O3c9MTYwMDthcHBpZD15dGFjaHlvbg--/https://s.yimg.com/uu/api/res/1.2/yR.CeHzEqJkUya1Hcv9VEw--~B/aD0xMDM1O3c9MTYwMDthcHBpZD15dGFjaHlvbg--/https://o.aolcdn.com/images/dims?crop=1800%2C1164%2C0%2C0&quality=85&format=jpg&resize=1600%2C1035&image_uri=https%3A%2F%2Fs.yimg.com%2Fos%2Fcreatr-uploaded-images%2F2018-11%2F1cd34130-e6eb-11e8-aff7-5d91c3e0b717&client=a1acac3e1b3290917d92&signature=f6841120c4540f762e6bfd79b4788d0c35ae7e31.cf.jpg"
+  }
+]

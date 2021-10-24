@@ -1,0 +1,117 @@
+﻿@page "/Generate/{Id:guid}"
+@using UnTrash.Data
+@using Microsoft.AspNetCore.WebUtilities
+
+<MudContainer
+    Class="my-10;"
+    Fixed="true">
+
+    <MudGrid
+        Class="mt-16">
+
+        <MudItem
+            xs="12"
+            sm="12"
+            md="6">
+
+            <MudText
+                Typo="Typo.h1">
+                Your unTrash
+            </MudText>
+            <MudText
+                Color="Color.Primary"
+                Typo="Typo.h1">
+                passport is
+            </MudText>
+            <MudText
+                Typo="Typo.h1">
+                one click away!
+            </MudText>
+
+        </MudItem>
+
+        <MudItem
+            xs="12"
+            sm="12"
+            md="6">
+
+            <MudCard
+                Class="pa-4">
+                <MudTextField
+                    @bind-Value="@serialNumber"
+                    T="string"
+                    Immediate="true"
+                    Label="Enter your device serial number"
+                    Error="@failedSerialNumber"
+                    ErrorText="The entered serialnumber is not correct"
+                    Variant="Variant.Outlined"/>
+
+                <MudButton
+                    Class="mt-4"
+                    Variant="Variant.Filled"
+                    EndIcon="@Icons.Material.Filled.Send"
+                    OnClick="@OnSendClick"
+                    Color="Color.Primary">
+                    Generate
+                </MudButton>
+            </MudCard>
+        </MudItem>
+
+
+    </MudGrid>
+</MudContainer>
+
+
+@code {
+    private Product product;
+    private string serialNumber;
+    private bool failedSerialNumber;
+
+    [Parameter]
+    public Guid Id { get; set; }
+
+    [Inject]
+    public IndividualProductDataProvider IndividualProductDataProvider { get; set; }
+
+    [Inject]
+    public ProductDataProvider Provider { get; set; }
+
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (!firstRender)
+            return;
+
+        product = await Provider.GetSingle(Id);
+        if (product == null)
+            return;
+
+        StateHasChanged();
+    }
+
+    private async Task OnSendClick()
+    {
+        failedSerialNumber = false;
+
+        bool valid = await IndividualProductDataProvider
+            .CheckSerial(product.Id, serialNumber);
+
+        if (!valid)
+        {
+            failedSerialNumber = true;
+            StateHasChanged();
+            return;
+        }
+
+        var guid = await IndividualProductDataProvider.Add(product.Id, serialNumber);
+
+        string addQueryString = QueryHelpers.AddQueryString($"/R/{guid}", new Dictionary<string, string>()
+        {
+            {"showBig", true.ToString()}
+        });
+        NavigationManager.NavigateTo(addQueryString);
+    }
+
+}

@@ -1,0 +1,130 @@
+﻿@page "/Sell/{Id:guid}"
+@using UnTrash.Data
+@using Microsoft.AspNetCore.WebUtilities
+
+
+<MudContainer
+    Class="my-10;"
+    Fixed="true">
+
+    <MudText
+        Class="mt-5"
+        Color="Color.Primary"
+        Typo="Typo.h1">
+        Sell unTrash
+    </MudText>
+    <MudText
+        Typo="Typo.h1">
+        devices here
+    </MudText>
+
+    @if (products.Any())
+    {
+        @foreach (var product in products)
+        {
+            <MudCard
+                Class="mt-5 mb-5"
+                Elevation="25">
+                <MudCardMedia
+                    Image="@product.Item1.ImageUrl"
+                    Height="200"/>
+
+                <MudCardContent>
+                    <MudText Typo="Typo.h5">@product.Item1.Name</MudText>
+                    <MudTextField
+                        DisableUnderLine="true"
+                        Value="@($"{product.Item1.TotalComponentsPrice:F2} CHF")"
+                        Label="Total component price"
+                        Variant="Variant.Text">
+                    </MudTextField>
+
+                    <MudTextField
+                        DisableUnderLine="true"
+                        Value="@($"{product.Item1.TotalMaterialPrice:F2} CHF")"
+                        Label="Total material price"
+                        Variant="Variant.Text">
+                    </MudTextField>
+                </MudCardContent>
+
+                <MudCardActions>
+                    <MudIconButton
+                        Icon="@Icons.Filled.QrCode"
+                        OnClick="@(() => NavigationManager.NavigateTo($"/R/{product.Item2.Id}"))"
+                        Color="Color.Primary"/>
+
+                    <MudText Typo="Typo.body2" Color="Color.Primary">Show device</MudText>
+                    <MudSpacer/>
+                    <MudButtonGroup
+                        OverrideStyles="true">
+                        <MudButton
+                            Color="Color.Primary"
+                            Variant="Variant.Outlined">
+                            Sell
+                        </MudButton>
+                    </MudButtonGroup>
+                </MudCardActions>
+            </MudCard>
+        }
+    }
+    else
+    {
+        <MudText
+            Class="mt-16"
+            Color="Color.Primary"
+            Typo="Typo.h2">
+            Ohh no..
+        </MudText>
+        <MudText
+            Typo="Typo.h2">
+            there are no devices listed
+        </MudText>
+    }
+
+</MudContainer>
+
+
+@code {
+    private List<Tuple<Product, IndividualProduct>> products = new List<Tuple<Product, IndividualProduct>>();
+    private string productName;
+    private bool failed;
+
+    [Parameter]
+    public Guid Id { get; set; }
+
+    [Inject]
+    public ProductDataProvider ProductDataProvider { get; set; }
+
+    [Inject]
+    public IndividualProductDataProvider IndividualProductDataProvider { get; set; }
+
+    [Inject]
+    public NavigationManager NavigationManager { get; set; }
+
+    protected override async Task OnInitializedAsync()
+    {
+        var uri = NavigationManager.ToAbsoluteUri(NavigationManager.Uri);
+        if (QueryHelpers.ParseQuery(uri.Query).TryGetValue("initName", out var raw))
+        {
+            productName = raw;
+        }
+        else
+        {
+            productName = "??? 404 ???";
+        }
+
+        List<Tuple<Product, IndividualProduct>> list = new List<Tuple<Product, IndividualProduct>>();
+        var individualProducts = await IndividualProductDataProvider.GetAll();
+
+        foreach (var individualProduct in individualProducts)
+        {
+            if (individualProduct.Product != Id)
+                continue;
+
+            var product = await ProductDataProvider.GetSingle(individualProduct.Product);
+            list.Add(new Tuple<Product, IndividualProduct>(product, individualProduct));
+        }
+
+        products = list;
+    }
+
+}
